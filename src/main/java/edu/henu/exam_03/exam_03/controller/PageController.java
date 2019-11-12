@@ -84,6 +84,8 @@ public class PageController {
         session.setAttribute("page",page);
         session.setAttribute("size",size);
         Page<Student> students =teacherService.findstudent(eid,page,size);
+        int totalPages=students.getTotalPages();
+        session.setAttribute("totalPages",totalPages);
         System.out.println(students);
         List<Student> students1 = students.getContent();
         request.setAttribute("students",students1);

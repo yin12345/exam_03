@@ -107,7 +107,7 @@
 		 <input name="stu_id" placeholder="学号*" size="20" type="text">
 		 <input name="stu_name" placeholder="姓名*" size="20" type="text">
 		 <input name="stu_class" placeholder="班级*" size="20" type="text">
-		 <input name="stu_exam"  value="${requestScope.eid}"  type="hidden">
+		 <input name="stu_exam"  value="${sessionScope.eid}"  type="hidden">
 		 <input class="btn" value="添加" type="submit">
 	</form>
 	
@@ -116,18 +116,18 @@
 	  
 	   <form action="setsize" method="post" style="padding:20px;float:left;background-color:#EEE;margin:0 0 20px">
 	   分页大小
-	   <input name="size" value="30" type="text">
+	   <input name="size" value="${sessionScope.size}" placeholder="30" type="text">
 	   <input value="设置" type="submit">
 	   </form>
-	  
-	  
-	   <form action="setpage" method="post" style="padding:20px;background-color:#EEE;margin:0 0 20px;float:right">
-	    <a href="setsize?page=1" >第一页</a>
-	    <a href="teacher_student?eid=1&pageNo=-1" >上一页</a>
-	    <input name="page" placeholder="0/0" type="text">
-	    <input type="submit" value="确认"></input>
-	    <a href="teacher_student?eid=1&pageNo=1" >下一页</a>
-	    <a href="setpage?eid=1&pageNo=1" >最后一页</a>
+
+
+		 <form action="setpage" method="post" style="padding:20px;background-color:#EEE;margin:0 0 20px;float:right">
+			 <a href="setpage?page=0" >第一页</a>
+			 <a href="setpage?page=${sessionScope.page-1}" >上一页</a>
+			 <input name="page" placeholder="0/${sessionScope.totalPages}" type="text">
+			 <input type="submit" value="确认"></input>
+			 <a href="setpage?page=${sessionScope.page+1}" >下一页</a>
+			 <a href="setpage?page=${sessionScope.totalPages}" >最后一页</a>
 	   
 	   </form>
 		 <table class="table" border="1" style="width:100%;padding:20px;background-color:#EEE;margin:0 0 20px;">
@@ -153,13 +153,13 @@
 			 </c:forEach>
 			 </tbody>
 		</table>
-		<form action="teacher_student" method="post" style="padding:20px;background-color:#EEE;margin:0 0 20px;float:right">
-	    <a href="findstudent?stu_id=${requestScope.eid}&page=1" >第一页</a>
-	    <a href="teacher_student?eid=1&pageNo=-1" >上一页</a>
+		<form action="setpage" method="post" style="padding:20px;background-color:#EEE;margin:0 0 20px;float:right">
+	    <a href="setpage?page=0" >第一页</a>
+	    <a href="setpage?page=${sessionScope.page-1}" >上一页</a>
 	    <input name="page" placeholder="0/0" type="text">
 	    <input type="submit" value="确认"></input>
-	    <a href="teacher_student?eid=1&pageNo=1" >下一页</a>
-	    <a href="teacher_student?eid=1&pageNo=1" >最后一页</a>
+	    <a href="setpage?page=${sessionScope.page+1}" >下一页</a>
+	    <a href="setpage?page=${sessionScope.totalPages}" >最后一页</a>
 	   
 	   </form>
 	   <br/>

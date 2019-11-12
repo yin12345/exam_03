@@ -1,6 +1,7 @@
 <%@ page language="java" import="java.util.*"
 		 pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -67,7 +68,7 @@
 					<a href="teacher_manage_summary">考试概况</a>
 					<a href="teacher_manage_notify">学生信息</a>
 					<a href="teacher_manage_unlock">解除绑定</a>
-					<a href="teacher_manage_unlock">通过管理</a>
+					<a href="teacher_manage_unlock">通知管理</a>
 				</div>
 			</div><span class="shu">|</span>
 			<a href="after">考后操作</a>
@@ -102,7 +103,7 @@
 	 <input name="ename"  value="${sessionScope.exam.ename}" type="text" >
 	考试时间：
 		<div class="controls input-append date form_datetime" style="display:inline-block;margin:0px 0px 0px 0px" data-date="2019-11-5T05:25:07Z" data-date-format="yyyy-mm-dd hh:ii" data-link-field="dtp_input1">
-			<input name="starttime" size="16" type="text" placeholder="考试时间*" value="${sessionScope.exam.starttime}" pattern="yyyy-MM-dd HH:mm" readonly style="background-color:#FFFFFF ">
+			<input name="starttime" size="16" type="text" placeholder="考试时间*" value="<fmt:formatDate value="${exam.starttime}" pattern="yyyy-MM-dd HH:mm" />" readonly style="background-color:#FFFFFF ">
 			<span class="add-on"><i class="icon-remove"></i></span>
 			<span class="add-on"><i class="icon-th"></i></span>
 		</div>
@@ -137,7 +138,6 @@
 	 <input name="paper" type="file">
 	 <input class="btn" style="background-color:#006dcc;color:black" value="上传" type="submit">
 	</form>
-
 	<form class="exam-from" action="teacher_student"  method="post" style="padding:20px;background-color:#EEE;margin:0 0 20px">
 	<h3>导入学生名单</h3>
 	<p>目前设定参加此次考试的学生人数：0</p>

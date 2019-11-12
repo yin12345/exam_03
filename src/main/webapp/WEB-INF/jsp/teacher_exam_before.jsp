@@ -2,6 +2,7 @@
 <%@ page language="java"
 		 pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -137,7 +138,10 @@
 		 <c:forEach items="${sessionScope.exams}" var="exam">
 			 <tr>
 				 <th>${exam.ename}</th>
-				 <th>${exam.starttime}</th>
+				 <th>
+					 <fmt:formatDate value="${exam.starttime}" pattern="yyyy-MM-dd HH:mm" />
+				 </th>
+
 				 <th>${exam.tname}</th>
 				 <th>${exam.exampaper}</th>
 				 <th>${exam.autostart}</th>
@@ -147,7 +151,7 @@
 				 <th>${exam.cleaned}</th>
 				 <th>
 					 <c:if test="${exam.finished==0}">
-						<span   class="label label-info"><a href="teacher_exam_modify?eid=${exam.eid}&ename=${exam.ename}&starttime=${exam.starttime}&autostart=${exam.autostart}" style="color: white;">修改</a></span>
+						<span   class="label label-info"><a href="teacher_exam_modify?eid=${exam.eid}&ename=${exam.ename}&starttime=<fmt:formatDate value="${exam.starttime}" pattern="yyyy-MM-dd HH:mm" />&autostart=${exam.autostart}" style="color: white;">修改</a></span>
 					 </c:if>
 				 </th
 			 </tr>

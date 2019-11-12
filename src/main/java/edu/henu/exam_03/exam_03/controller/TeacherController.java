@@ -48,7 +48,7 @@ public class TeacherController {
     }
     @PostMapping("teacher_exam_upload")
     public String uploadpaper(Integer eid, MultipartFile paper, HttpServletRequest request) throws IOException {
-        System.out.println(eid);
+
         if(!paper.isEmpty()){
             //上传文件路径
             String path =request.getServletContext().getRealPath("/upload/");
@@ -75,7 +75,10 @@ public class TeacherController {
         int size = (int) session.getAttribute("size");
         teacherService.addstudent(student);
         Page<Student> students =teacherService.findstudent(eid,page,size);
-        request.setAttribute("students",students);
+        int totalPages=students.getTotalPages();
+        session.setAttribute("totalPages",totalPages);
+        List<Student> students1 = students.getContent();
+        request.setAttribute("students",students1);
         return "teacher_student";
     }
     @GetMapping("delstudent")
@@ -86,27 +89,32 @@ public class TeacherController {
         int size = (int) session.getAttribute("size");
         teacherService.delstudent(student);
         Page<Student> students =teacherService.findstudent(eid,page,size);
-        request.setAttribute("students",students);
+        int totalPages=students.getTotalPages();
+        session.setAttribute("totalPages",totalPages);
+        List<Student> students1 = students.getContent();
+        request.setAttribute("students",students1);
         return "teacher_student";
     }
-    @GetMapping("setsize")
+    @PostMapping("setsize")
     public String setsize(int size,HttpServletRequest request){
         HttpSession session=request.getSession();
         Integer eid= (Integer) session.getAttribute("eid");
         int page = (int) session.getAttribute("page");
         session.setAttribute("size",size);
         Page<Student> students =teacherService.findstudent(eid,page,size);
-        request.setAttribute("students",students);
+        List<Student> students1 = students.getContent();
+        request.setAttribute("students",students1);
         return "teacher_student";
     }
-    @GetMapping("setpage")
+    @RequestMapping(value = "setpage",method = {RequestMethod.GET,RequestMethod.POST})
     public String setpage(int page,HttpServletRequest request){
         HttpSession session=request.getSession();
         Integer eid= (Integer) session.getAttribute("eid");
         int size = (int) session.getAttribute("size");
         session.setAttribute("page",page);
         Page<Student> students =teacherService.findstudent(eid,page,size);
-        request.setAttribute("students",students);
+        List<Student> students1 = students.getContent();
+        request.setAttribute("students",students1);
         return "teacher_student";
     }
 }
