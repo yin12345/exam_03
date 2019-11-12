@@ -1,0 +1,148 @@
+html{color:#000;background:#fff;}
+body{font:12px/1.5 "瀹嬩綋",Tahoma,Arial,Helvetica,sans-serif;word-break:break-all;word-wrap:break-word;}
+body,h1,h2,h3,h4,h5,h6,p,dl,dd{margin:0;}ul,ol,input{margin:0;padding:0;}li{list-style: none;}img{border:none;vertical-align:middle;}table{border-collapse:collapse;border-spacing:0;}em,i{font-style:normal}b,strong,th{font-weight:normal;} a{text-decretiom:none;color: #333333;}
+body{
+	margin: 0;
+	font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+
+
+.topimage {
+	width: 100%;
+	height: 120px;
+
+}
+.topimage img{
+	width: 100%;
+	height: 120px;
+}
+.box{
+	width: 100%;
+	height: 40px;
+	background: #333333;
+}
+.cen{
+	width: 1225px;
+	margin: 0 auto;
+	/*height: 40px;
+	background: blue;*/
+}
+.lefta{
+	width: 432px;
+	height: 40px;
+	/*background: red;*/
+	float: left;
+	font-size: 0;
+}
+.righta{
+	width:282px;
+	height: 40px;
+	/*background: red;*/
+	float: right;
+	text-align: left;
+	font-size: 0;
+	margin-right: -4px;
+}
+.lefta a{
+	font-size: 12px;
+	text-decoration: none;
+	line-height: 40px;
+	color: #B0B0B0;
+	padding-right: 3px;
+	/*border-right: 1px solid #393E42;*/
+	padding-left: 5px;
+}
+.righta a{
+	font-size: 12px;
+	text-decoration: none;
+	line-height: 40px;
+	color: #B0B0B0;
+	padding-right: 3px;
+	/*border-right: 1px solid #393E42;*/
+	padding-left: 5px;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.clear:after{
+	content: "";
+	clear: both;
+	display: block;
+}
+.clear{
+	*zoom:1;
+}
+.cen a:hover{
+	color: #fff;
+}
+.righta .message{
+	padding-left: 11px;
+	padding-right: 27px;
+}
+.gwc{
+	display: inline-block;
+	width: 92px;
+	height: 40px;
+	font-size: 12px;
+	text-decoration: none;
+	line-height: 40px;
+	color: #B0B0B0;
+	text-align: center;
+	padding-left: 27px;
+	/*padding-right: 22px;*/
+	/*background: red;*/
+
+	position: relative;
+}
+.gwcxiala{
+	width: 316px;
+	height: 98px;
+	line-height: 98px;
+	background: #fff;
+	border: 1px solid #fff;
+	position: absolute;
+	right: 0px;
+	top: 40px;
+	box-shadow: 0 10px 50px 3px #EEEEEE;
+	display: none;
+	z-index: 1;
+}
+.claspan{
+	color: #333;
+}
+.shu{
+	font-size: 12px;
+	color: #424242;
+}
+
+.gwc:hover .gwcxiala{
+	display: block;
+}
+.gwc:hover span{
+	color:#FF6C0A
+}
+
+
+.mi{
+	float: left;
+	margin-right: 180px;
+}
+.wenzi{
+
+	width: 623px;
+	height: 57px;
+	/*background: blue;*/
+	float: left;
+	margin-right: 20px;
+	/*margin: 0 auto;*/
+}
+.wenzi a{
+	text-decoration: none;
+	color: #000;
+	font-size: 16px;
+	line-height: 57px;
+	padding-right: 13px;
+}

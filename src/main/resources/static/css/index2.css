@@ -1,0 +1,139 @@
+html{color:#000;background:#fff;}
+body{font:12px/1.5 "瀹嬩綋",Tahoma,Arial,Helvetica,sans-serif;word-break:break-all;word-wrap:break-word;}
+body,h1,h2,h3,h4,h5,h6,p,dl,dd{margin:0;}ul,ol,input{margin:0;padding:0;}li{list-style: none;}img{border:none;vertical-align:middle;}table{border-collapse:collapse;border-spacing:0;}em,i{font-style:normal}b,strong,th{font-weight:normal;} a{text-decretiom:none;color: #333333;}
+body{
+	margin: 0;
+	font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+
+
+
+.mi{
+	width: 200px;
+	height: 98px;
+}
+.mi .tb{
+	padding-top: 24px;
+}
+.middle{
+	width: 100%;
+	height: 588px;
+	
+	background-position: center;
+	position: relative;
+}
+.aaa{
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+/*.middle img{
+	width: 1349px;
+	height: 588px;
+}*/
+.deng{
+	width: 430px;
+	height: 536px;
+	margin:0 auto;
+	padding-top: 30px;
+	z-index: 1;
+	position: relative;
+}
+.denglu{
+	width: 610px;
+	height: 524px;
+	background-color: #fff;
+
+}
+.clear:after{
+	content: "";
+	clear: both;
+	display: block;
+}
+.clear {
+	*zoom:1;
+}
+.first{
+	width: 413px;
+	height: 56px;
+	/*background: #000;*/
+	text-align: center;
+	font-size: 24px;
+	padding-top: 27px;
+	/*padding-bottom: 24px;*/
+	margin-bottom: 10px;
+}
+.center{
+	color:#f56600;
+	font-size: 24px;
+	text-decoration: none;
+
+}
+.line{
+	width: 1px;
+	height: 29px;
+	margin: 0 43px 0 43px;
+	border: 1px solid #e0e0e0;
+
+}
+.right{
+	color: #000;
+	font-size: 24px;
+	text-decoration: none;
+
+}
+.second{
+	width: 413px;
+	height: 227px;
+}
+.erweima{
+	position: relative;
+}
+.erwei{
+	width: 410px;
+	height: 365px;
+	padding-top: 78px;
+	text-align: center;
+	background: #fff;
+	position: absolute;
+	top: -16px;
+	z-index: 1;
+	display: none;
+}
+.erwei1{
+	width: 410px;
+	height: 183px;
+	text-align: center;
+}
+.erweizi{
+	margin-top: 10px;
+}
+.erweizi span{
+	color: #ff6700;
+}
+.mima{
+	width: 348px;
+	height: 124px;
+	margin: 0 auto;
+	/*background: #000;*/
+}
+.zh{
+	width: 344px;
+	height: 42px;
+	margin-bottom: 10px;
+}
+.mm{
+	width: 344px;
+	height: 42px;
+	margin-bottom: 25px;
+}
+br{
+	height: 10px;
+}
+.tp{
+	
+	/*background: #000;*/
+}
