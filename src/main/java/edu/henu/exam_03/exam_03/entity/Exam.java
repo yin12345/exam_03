@@ -7,7 +7,8 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.util.*;
+
 @Entity
 @Table(name = "exam")
 public class Exam {
@@ -27,6 +28,10 @@ public class Exam {
     private String tname;
     private int runing;
     private Integer tid;
+    private int dateout;
+    @ManyToMany( mappedBy="exams",fetch =FetchType.LAZY, targetEntity=Student.class)
+    private List<Student> students ;
+
 
     public Integer getEid() {
         return eid;
@@ -122,5 +127,21 @@ public class Exam {
 
     public void setTid(Integer tid) {
         this.tid = tid;
+    }
+
+    public List<Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(List<Student> students) {
+        this.students = students;
+    }
+
+    public int getDateout() {
+        return dateout;
+    }
+
+    public void setDateout(int dateout) {
+        this.dateout = dateout;
     }
 }

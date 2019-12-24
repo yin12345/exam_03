@@ -12,6 +12,7 @@ public class Teacher {
    private String name;
    private String  pass;
    private String fullname;
+   private  String admin;
 
    public Integer getId() {
       return id;
@@ -43,5 +44,13 @@ public class Teacher {
 
    public void setFullname(String fullname) {
       this.fullname = fullname;
+   }
+
+   public String getAdmin() {
+      return admin;
+   }
+
+   public void setAdmin(String admin) {
+      this.admin = admin;
    }
 }

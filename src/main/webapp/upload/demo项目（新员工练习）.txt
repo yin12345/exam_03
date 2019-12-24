@@ -1,58 +1,58 @@
-¹¦ÄÜÃèÊö£º
-µêÆÌ·þÎñ£ºdemo-shop
-´´½¨µêÆÌ£¨µêÆÌÃû³Æ²»ÄÜÖØ¸´£©
-¸üÐÂµêÆÌÉÏÏß×´Ì¬
-É¾³ýµêÆÌ£¨Èç¹û´æÔÚÉÌÆ·²»ÄÜ±»É¾³ý£¬ÐëÔ¶³Ì·ÃÎÊÉÌÆ··þÎñ£©
-²é¿´µ¥¸öµêÆÌÐÅÏ¢£¨¸ù¾ÝID£©
-²éÑ¯È«²¿µêÆÌÐÅÏ¢ÁÐ±í£¨¿ÉÒÔ¸ù¾ÝÃû³ÆºÍ×´Ì¬½øÐÐÉ¸Ñ¡£¬¿ÉÒÔ°´ÕÕÃû³Æ½øÐÐÅÅÐò£¬½øÐÐ·ÖÒ³£©
+åŠŸèƒ½æè¿°ï¼š
+åº—é“ºæœåŠ¡ï¼šdemo-shop
+åˆ›å»ºåº—é“ºï¼ˆåº—é“ºåç§°ä¸èƒ½é‡å¤ï¼‰
+æ›´æ–°åº—é“ºä¸Šçº¿çŠ¶æ€
+åˆ é™¤åº—é“ºï¼ˆå¦‚æžœå­˜åœ¨å•†å“ä¸èƒ½è¢«åˆ é™¤ï¼Œé¡»è¿œç¨‹è®¿é—®å•†å“æœåŠ¡ï¼‰
+æŸ¥çœ‹å•ä¸ªåº—é“ºä¿¡æ¯ï¼ˆæ ¹æ®IDï¼‰
+æŸ¥è¯¢å…¨éƒ¨åº—é“ºä¿¡æ¯åˆ—è¡¨ï¼ˆå¯ä»¥æ ¹æ®åç§°å’ŒçŠ¶æ€è¿›è¡Œç­›é€‰ï¼Œå¯ä»¥æŒ‰ç…§åç§°è¿›è¡ŒæŽ’åºï¼Œè¿›è¡Œåˆ†é¡µï¼‰
 
-ÉÌÆ··þÎñ£ºdemo-goods
-·¢²¼ÉÌÆ·£¨µêÆÌÏÂÏß×´Ì¬²»ÄÜ·¢²¼ÉÌÆ·£©
-¸üÐÂÉÌÆ·ÐÅÏ¢
-É¾³ýÉÌÆ·ÐÅÏ¢
-²é¿´µ¥¸öÉÌÆ·ÐÅÏ¢£¨ÐëÏÔÊ¾µêÆÌÃû³Æ£¬ÐëÔ¶³Ì·ÃÎÊµêÆÌ·þÎñ£©
-²éÑ¯Ä³µêÆÌÏÂµÄÈ«²¿ÉÌÆ·£¨¿ÉÒÔ°´ÉÌÆ·Ãû³Æ¡¢ÉÌÆ·¼Û¸ñ·¶Î§½øÐÐÉ¸Ñ¡£¬¿ÉÒÔ°´ÕÕÃû³Æ¡¢¼Û¸ñ¸ßµÍÅÅÐò£¬½øÐÐ·ÖÒ³£©
+å•†å“æœåŠ¡ï¼šdemo-goods
+å‘å¸ƒå•†å“ï¼ˆåº—é“ºä¸‹çº¿çŠ¶æ€ä¸èƒ½å‘å¸ƒå•†å“ï¼‰
+æ›´æ–°å•†å“ä¿¡æ¯
+åˆ é™¤å•†å“ä¿¡æ¯
+æŸ¥çœ‹å•ä¸ªå•†å“ä¿¡æ¯ï¼ˆé¡»æ˜¾ç¤ºåº—é“ºåç§°ï¼Œé¡»è¿œç¨‹è®¿é—®åº—é“ºæœåŠ¡ï¼‰
+æŸ¥è¯¢æŸåº—é“ºä¸‹çš„å…¨éƒ¨å•†å“ï¼ˆå¯ä»¥æŒ‰å•†å“åç§°ã€å•†å“ä»·æ ¼èŒƒå›´è¿›è¡Œç­›é€‰ï¼Œå¯ä»¥æŒ‰ç…§åç§°ã€ä»·æ ¼é«˜ä½ŽæŽ’åºï¼Œè¿›è¡Œåˆ†é¡µï¼‰
 
-Êý¾Ý¿â£º
+æ•°æ®åº“ï¼š
 192.168.105.80:3306
 demo/demo
 
-Êý¾Ý±í£º
+æ•°æ®è¡¨ï¼š
 demo_goods
 demo_shop
 
 CREATE TABLE `demo_goods` (
-  `id` varchar(32) COLLATE utf8mb4_bin NOT NULL COMMENT 'ÊµÌåID',
-  `create_id` varchar(32) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '´´½¨ÈË',
-  `create_time` datetime DEFAULT NULL COMMENT '´´½¨Ê±¼ä',
-  `update_id` varchar(32) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '¸üÐÂÈË',
-  `update_time` datetime DEFAULT NULL COMMENT '¸üÐÂÊ±¼ä',
-  `is_del` char(1) COLLATE utf8mb4_bin DEFAULT 'N' COMMENT 'É¾³ý±êÊ¶',
-  `goods_name` varchar(50) COLLATE utf8mb4_bin NOT NULL COMMENT 'ÉÌÆ·Ãû',
-  `shop_id` varchar(50) COLLATE utf8mb4_bin NOT NULL COMMENT 'µêÆÌID',
-  `goods_price` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '¼Û¸ñ',
-  `goods_stock` int(11) NOT NULL DEFAULT '0' COMMENT '¿â´æ',
+  `id` varchar(32) COLLATE utf8mb4_bin NOT NULL COMMENT 'å®žä½“ID',
+  `create_id` varchar(32) COLLATE utf8mb4_bin DEFAULT NULL COMMENT 'åˆ›å»ºäºº',
+  `create_time` datetime DEFAULT NULL COMMENT 'åˆ›å»ºæ—¶é—´',
+  `update_id` varchar(32) COLLATE utf8mb4_bin DEFAULT NULL COMMENT 'æ›´æ–°äºº',
+  `update_time` datetime DEFAULT NULL COMMENT 'æ›´æ–°æ—¶é—´',
+  `is_del` char(1) COLLATE utf8mb4_bin DEFAULT 'N' COMMENT 'åˆ é™¤æ ‡è¯†',
+  `goods_name` varchar(50) COLLATE utf8mb4_bin NOT NULL COMMENT 'å•†å“å',
+  `shop_id` varchar(50) COLLATE utf8mb4_bin NOT NULL COMMENT 'åº—é“ºID',
+  `goods_price` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT 'ä»·æ ¼',
+  `goods_stock` int(11) NOT NULL DEFAULT '0' COMMENT 'åº“å­˜',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='ÉÌÆ·±í
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='å•†å“è¡¨
 
 CREATE TABLE `demo_shop` (
-  `id` varchar(32) COLLATE utf8mb4_bin NOT NULL COMMENT 'ÊµÌåID',
-  `create_id` varchar(32) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '´´½¨ÈË',
-  `create_time` datetime DEFAULT NULL COMMENT '´´½¨Ê±¼ä',
-  `update_id` varchar(32) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '¸üÐÂÈË',
-  `update_time` datetime DEFAULT NULL COMMENT '¸üÐÂÊ±¼ä',
-  `is_del` char(1) COLLATE utf8mb4_bin DEFAULT 'N' COMMENT 'É¾³ý±êÊ¶',
-  `shop_name` varchar(50) COLLATE utf8mb4_bin NOT NULL COMMENT 'ÉÌÆ·Ãû',
-  `shop_state` tinyint(4) NOT NULL DEFAULT '2' COMMENT 'ÉÏÏß×´Ì¬£º1ÉÏÏß2ÏÂÏß',
+  `id` varchar(32) COLLATE utf8mb4_bin NOT NULL COMMENT 'å®žä½“ID',
+  `create_id` varchar(32) COLLATE utf8mb4_bin DEFAULT NULL COMMENT 'åˆ›å»ºäºº',
+  `create_time` datetime DEFAULT NULL COMMENT 'åˆ›å»ºæ—¶é—´',
+  `update_id` varchar(32) COLLATE utf8mb4_bin DEFAULT NULL COMMENT 'æ›´æ–°äºº',
+  `update_time` datetime DEFAULT NULL COMMENT 'æ›´æ–°æ—¶é—´',
+  `is_del` char(1) COLLATE utf8mb4_bin DEFAULT 'N' COMMENT 'åˆ é™¤æ ‡è¯†',
+  `shop_name` varchar(50) COLLATE utf8mb4_bin NOT NULL COMMENT 'å•†å“å',
+  `shop_state` tinyint(4) NOT NULL DEFAULT '2' COMMENT 'ä¸Šçº¿çŠ¶æ€ï¼š1ä¸Šçº¿2ä¸‹çº¿',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='µêÆÌ±í';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='åº—é“ºè¡¨';
 
 
-¼¼ÊõÊµÏÖ£ºspring boot£¨log¡¢test¡¢web¡¢jpa£©¡¢spring cloud£¨discovery¡¢feign£©
-ÆäËû×é¼þ£ºlombok¡¢druid
+æŠ€æœ¯å®žçŽ°ï¼šspring bootï¼ˆlogã€testã€webã€jpaï¼‰ã€spring cloudï¼ˆdiscoveryã€feignï¼‰
+å…¶ä»–ç»„ä»¶ï¼šlombokã€druid
 
-ÒªÇó£º
-´úÂë¹æ·¶£¬½á¹¹ÇåÎú£¬Âß¼­ÑÏ½÷£¬×ñÑ­ÉÌÒµÔÆÄ¿Ç°ÏîÄ¿ÕûÌå½á¹¹ºÍ´úÂë·ç¸ñ
-¹¦ÄÜÍêÕû£¬ÄÜÕý³£²¿ÊðÔËÐÐ
+è¦æ±‚ï¼š
+ä»£ç è§„èŒƒï¼Œç»“æž„æ¸…æ™°ï¼Œé€»è¾‘ä¸¥è°¨ï¼Œéµå¾ªå•†ä¸šäº‘ç›®å‰é¡¹ç›®æ•´ä½“ç»“æž„å’Œä»£ç é£Žæ ¼
+åŠŸèƒ½å®Œæ•´ï¼Œèƒ½æ­£å¸¸éƒ¨ç½²è¿è¡Œ
 
 

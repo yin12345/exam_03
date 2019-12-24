@@ -2,6 +2,8 @@ package edu.henu.exam_03.exam_03.dao;
 
 import edu.henu.exam_03.exam_03.entity.Exam;
 import org.springframework.data.domain.Example;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
@@ -18,4 +20,10 @@ public interface ExamDao extends JpaRepository<Exam,Integer>{
     List<Exam> findExamsByTid(Integer tid);
 
 
+
+    @Query("select u from Exam u")
+    Page<Exam> findExamsByPages(Pageable pageable);
+
+    @Query("select u from Exam u inner join u.students r where r.stu_id = ?1 and r.stu_submit =?2")
+    List<Exam>Stu_Submit(String stu_id,String stu_submit);
 }

@@ -1,11 +1,11 @@
 html{color:#000;background:#fff;}
 body{font:12px/1.5 "瀹嬩綋",Tahoma,Arial,Helvetica,sans-serif;word-break:break-all;word-wrap:break-word;}
-body,h1,h2,h3,h4,h5,h6,p,dl,dd{margin:0;}ul,ol,input{margin:0;padding:0;}li{list-style: none;}img{border:none;vertical-align:middle;}table{border-collapse:collapse;border-spacing:0;}em,i{font-style:normal}b,strong,th{font-weight:normal;} a{text-decretiom:none;color: #333333;}
+		body,h1,h2,h3,h4,h5,h6,p,dl,dd{margin:0;}ul,ol,input{margin:0;padding:0;}li{list-style: none;}img{border:none;vertical-align:middle;}table{border-collapse:collapse;border-spacing:0;}em,i{font-style:normal}b,strong,th{font-weight:normal;} a{text-decretiom:none;color: #333333;}
 body{
-	margin: 0;
-	font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
-}
-
+		margin: 0;
+		font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+	}
+	
 
 .topimage {
 	width: 100%;
@@ -39,7 +39,7 @@ body{
 	height: 40px;
 	/*background: red;*/
 	float: right;
-	text-align: left;
+	text-align: center;
 	font-size: 0;
 	margin-right: -4px;
 }
@@ -94,7 +94,7 @@ body{
 	padding-left: 27px;
 	/*padding-right: 22px;*/
 	/*background: red;*/
-
+	
 	position: relative;
 }
 .gwcxiala{
@@ -124,7 +124,6 @@ body{
 .gwc:hover span{
 	color:#FF6C0A
 }
-
 
 .mi{
 	float: left;
